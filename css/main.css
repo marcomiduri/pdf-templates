@@ -1,0 +1,353 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'interregular';
+  src: url("../../fonts/inter-medium.woff2") format("woff2"), url("../../fonts/inter-regular.woff") format("woff"), url("../../fonts/Inter-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'poppinsbold';
+  src: url("../../fonts/poppins-bold.woff2") format("woff2"), url("../../fonts/poppins-bold.woff") format("woff"), url("../../fonts/Poppins-Bold.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'interbold';
+  src: url("../../fonts/inter-bold.woff2") format("woff2"), url("../../fonts/inter-bold.woff") format("woff"), url("../../fonts/Inter-Bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@page {
+  size: A4;
+  margin: 0; }
+
+.page {
+  width: 793px;
+  height: 1122px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "interregular", sans-serif;
+  line-height: 1.3;
+  font-size: 15px;
+  page-break-after: avoid;
+  color: #121314; }
+  .page_main {
+    background-image: url("../img/background2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 50px; }
+    .page_main:before {
+      content: "";
+      position: absolute;
+      background: #174F9D;
+      opacity: 0.7;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%; }
+
+.decor {
+  background: #174F9D;
+  width: 303px;
+  max-width: 303px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 98px 37px 98px 48px; }
+  .decor_info {
+    width: 238px;
+    position: relative;
+    z-index: 1;
+    background: none;
+    color: #fff; }
+  .decor-2 {
+    width: 50px;
+    padding: 0; }
+  .decor_main {
+    padding: 98px 62px 98px 54px;
+    color: #fff; }
+  .decor__title {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 254px; }
+  .decor__list {
+    line-height: 1.6;
+    padding-bottom: 74px; }
+  .decor__accreditation {
+    max-width: 100%; }
+    .decor__accreditation + div {
+      max-width: 100%; }
+
+img {
+  max-width: 100%; }
+
+a {
+  color: inherit; }
+
+span {
+  display: block; }
+
+.logo {
+  width: 20%;
+  margin-bottom: 25px; }
+
+.content {
+  padding: 73px 54px 54px;
+  width: 395px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .content:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #174F9D;
+    display: block;
+    margin-top: auto; }
+  .content-2 {
+    width: 742px; }
+
+.title {
+  font-family: "poppinsbold", sans-serif;
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  padding-bottom: 60px;
+  font-weight: 700; }
+  .title_proposal {
+    font-size: 70px; }
+  .title_overview {
+    padding-bottom: 80px; }
+  .title_scope {
+    padding-bottom: 50px; }
+  .title_terms {
+    padding-bottom: 40px; }
+
+.proposal {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .proposal-2 {
+    background: #fff;
+    width: 60%; }
+  .proposal:after {
+    content: none; }
+  .proposal h1 {
+    prince-bookmark-level: 1; }
+  .proposal__address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .proposal__address_column {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+  .proposal__galery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .proposal__galery div {
+      width: 50%; }
+  .proposal__description {
+    font-size: 14px;
+    width: 30%;
+    font-family: "interbold", sans-serif; }
+    .proposal__description_padding {
+      padding-bottom: 15px; }
+  .proposal__list {
+    max-width: 210px; }
+    .proposal__list li + li {
+      padding-top: 10px; }
+  .proposal__contact {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 120px; }
+    .proposal__contact-text {
+      max-width: 197px; }
+    .proposal__contact p + p {
+      padding-top: 5px; }
+    .proposal__contact .proposal__line {
+      width: 30px;
+      height: 3px;
+      background: #174F9D;
+      padding: 0;
+      margin: 11px 0 11px; }
+  .proposal__img {
+    margin-left: -55px;
+    margin-right: -91px;
+    position: relative;
+    z-index: 5; }
+  .proposal__persone {
+    position: absolute;
+    right: 0;
+    width: 159px;
+    -webkit-transform: translateX(89%);
+            transform: translateX(89%); }
+    .proposal__persone img {
+      border-radius: 50%;
+      border: 8px solid #fff;
+      height: 159px;
+      width: 159px; }
+
+.overview {
+  font-size: 16px; }
+  .overview h1 {
+    prince-bookmark-level: 4; }
+  .overview p {
+    padding-right: 34px;
+    margin-bottom: 25px; }
+  .overview .gaf {
+    margin-bottom: 60px; }
+
+.job h2 {
+  prince-bookmark-level: 3; }
+
+.job__img {
+  padding-bottom: 15px; }
+
+.job p {
+  padding-bottom: 50px; }
+  .job p:last-of-type {
+    padding: 0; }
+
+.warranty h2 {
+  prince-bookmark-level: 4; }
+
+.warranty h4 {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "interbold", sans-serif;
+  max-width: 320px;
+  padding-bottom: 22px; }
+
+.warranty p {
+  padding-bottom: 67px; }
+
+.scope h2 {
+  prince-bookmark-level: 5; }
+
+.scope__order {
+  border-bottom: 1px solid #174F9D; }
+
+.scope__list {
+  padding-bottom: 30px; }
+  .scope__list li {
+    padding: 6px 10px; }
+  .scope__list:first-of-type li:nth-of-type(even) {
+    background-color: #F4F4F4; }
+  .scope__list_grey li:nth-of-type(odd) {
+    background-color: #F4F4F4; }
+
+.scope__options {
+  width: 70%;
+  padding-top: 40px; }
+
+.scope h3 {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "interbold", sans-serif; }
+
+.scope__item {
+  padding-top: 30px; }
+
+.scope__name {
+  font-family: "interbold", sans-serif;
+  font-weight: 700; }
+
+.terms {
+  width: 395px; }
+  .terms__name {
+    font-family: "interbold", sans-serif;
+    font-weight: 700; }
+  .terms p {
+    font-size: 13px; }
+  .terms h4 {
+    font-size: 18px;
+    font-family: "interbold", sans-serif;
+    font-weight: 600;
+    padding-bottom: 15px;
+    padding-top: 30px; }
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0 -10px; }
+  .form__item {
+    width: 50%;
+    padding: 0 10px; }
+  .form__name {
+    width: 100%;
+    font-size: 13px;
+    padding-bottom: 10px;
+    display: block; }
+    .form__name input {
+      max-width: 100%;
+      border: none;
+      border-bottom: 1px solid #9e9e9e;
+      margin-bottom: 5px;
+      outline: transparent;
+      padding: 10px;
+      width: 90%; }
