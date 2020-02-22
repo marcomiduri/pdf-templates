@@ -39,6 +39,34 @@
   }
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -15px;
+  height: 765px;
+}
+
+.column {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: $blue;
+    display: block;
+    margin-top: auto;
+  }
+  &-small {
+    width: 30%;
+  }
+
+  &-big {
+    width: 70%;
+  }
+}
+
 .decor {
   background: $blue;
   width: 303px;
@@ -53,6 +81,23 @@
     z-index: 1;
     background: none;
     color: $white;
+  }
+
+  &__persone {
+    width: 130px;
+    margin-bottom: 25px;
+    img {
+      border-radius: 50%;
+      border: 4px solid $white;
+      height: 130px;
+      width: 130px;
+    }
+  }
+
+  &__address {
+    span:first-of-type {
+      padding-bottom: 30px;
+    }
   }
 
   // =========================================================
@@ -73,11 +118,21 @@
     font-size: 18px;
     font-weight: 600;
     padding-bottom: 254px;
+
+    &-2 {
+      padding-bottom: 369px;
+    }
   }
 
   &__list {
     line-height: 1.6;
     padding-bottom: 74px;
+
+    &-2 {
+      padding-bottom: 34px;
+      border-bottom: 1px solid $white;
+      margin-bottom: 30px;
+    }
   }
 
   &__accreditation {
@@ -125,7 +180,11 @@ span {
   // =========================================================
 
   &-2 {
-    width: 742px;
+    width: 555px;
+
+    &:after {
+      content: none;
+    }
   }
 }
 
@@ -137,12 +196,27 @@ span {
   padding-bottom: 60px;
   font-weight: 900;
 
+  &-2 {
+    text-transform: capitalize !important;
+    font-size: 50px;
+
+  }
+
   &_proposal {
     font-size: 70px;
+
+    &-2 {
+      padding-bottom: 170px;
+      font-size: 60px;
+    }
   }
 
   &_overview {
     padding-bottom: 80px;
+
+    &-2 {
+      padding-bottom: 60px;
+    }
   }
 
   &_scope {
@@ -151,6 +225,7 @@ span {
 
   &_terms {
     padding-bottom: 40px;
+
   }
 }
 
@@ -158,6 +233,8 @@ span {
 
 .proposal {
   justify-content: space-between;
+  position: relative;
+  z-index: 5;
 
   // =========================================================
 
@@ -179,15 +256,20 @@ span {
 
     &_column {
       flex-direction: column;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $blue;
+      margin-bottom: 30px;
     }
   }
 
   &__galery {
     display: flex;
     justify-content: space-between;
+    margin: 0 -10px;
 
     div {
       width: 50%;
+      padding: 0 10px;
     }
   }
 
@@ -215,6 +297,10 @@ span {
     display: flex;
     align-items: center;
     padding-left: 120px;
+
+    &-2 {
+      padding-left: 0;
+    }
 
     &-text {
       max-width: 197px;
@@ -289,6 +375,22 @@ span {
       padding: 0;
     }
   }
+
+  &__img-2 {
+    img {
+      height: 230px;
+    }
+    &:first-of-type {
+      padding-bottom: 80px;
+    }
+  }
+
+  &__description {
+    padding-bottom: 80px !important;
+    height: 230px;
+    display: flex;
+    align-items: flex-end;
+  }
 }
 
 // warranty
@@ -318,6 +420,10 @@ span {
     prince-bookmark-level: 5;
   }
 
+  &__title {
+    padding-top: 335px;
+  }
+
   &__order {
     border-bottom: 1px solid $blue;
   }
@@ -341,6 +447,10 @@ span {
   &__options {
     width: 70%;
     padding-top: 40px;
+
+    &-2 {
+      padding: 0;
+    }
   }
 
   h3 {
@@ -363,9 +473,16 @@ span {
 
 .terms {
   width: 395px;
+  &-2 {
+    width: 575px;
+  }
   &__name {
     font-family: $primaryTitleFont;
     font-weight: 700;
+  }
+
+  &__item + &__item {
+    padding-top: 70px;
   }
 
   p {
@@ -378,6 +495,20 @@ span {
     font-weight: 600;
     padding-bottom: 15px;
     padding-top: 30px;
+
+    &.terms__title {
+      padding-top: 0;
+      margin-bottom: 70px;
+
+      &:first-of-type {
+        height: 144px;
+      }
+
+      &:nth-of-type(2) {
+        height: 185px;
+      }
+
+    }
   }
 }
 
@@ -385,6 +516,7 @@ span {
   display: flex;
   width: 100%;
   margin: 0 -10px;
+
   &__item {
     width: 50%;
     padding: 0 10px;
