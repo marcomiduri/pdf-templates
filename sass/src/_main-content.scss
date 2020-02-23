@@ -12,6 +12,7 @@
   display: flex;
   box-sizing: border-box;
   font-family: $primaryFont;
+  font-weight: 300;
   line-height: 1.3;
   font-size: 15px;
   page-break-after: avoid;
@@ -157,8 +158,13 @@ span {
 }
 
 .logo {
-  width: 20%;
+  width: 23%;
   margin-bottom: 25px;
+
+  &-3 {
+    width: 20%;
+    margin: 0;
+  }
 }
 
 .content {
@@ -186,6 +192,15 @@ span {
       content: none;
     }
   }
+
+  &-3 {
+    padding: 0;
+    width: 100%;
+
+    &:after {
+      content: none;
+    }
+  }
 }
 
 .title {
@@ -199,7 +214,6 @@ span {
   &-2 {
     text-transform: capitalize !important;
     font-size: 50px;
-
   }
 
   &_proposal {
@@ -208,6 +222,10 @@ span {
     &-2 {
       padding-bottom: 170px;
       font-size: 60px;
+    }
+
+    &-3 {
+      font-size: 55px;
     }
   }
 
@@ -225,8 +243,49 @@ span {
 
   &_terms {
     padding-bottom: 40px;
+  }
+}
+
+.wrapper {
+  &__title {
+    background: $greyLight;
+    padding: 46px 70px;
+
+    h2 {
+      padding: 0;
+      font-size: 55px;
+    }
+  }
+
+  &__info {
+    width: 60%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 56px 70px 40px;
+    height: 875px;
+    box-sizing: border-box;
+  }
+
+  &__logo {
+    display: flex;
+
+    img {
+      width: 100px;
+    }
 
   }
+}
+
+.underline {
+  align-self: flex-end;
+  margin-bottom: 18px;
+  height: 2px;
+  background: $blue;
+  width: 80%;
 }
 
 // sections
@@ -241,6 +300,75 @@ span {
   &-2 {
     background: $white;
     width: 60%;
+  }
+
+  &__about {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__main,
+  &__certificate,
+  &__account {
+    padding: 46px 70px;
+  }
+
+  &__certificate {
+    display: flex;
+    background: $lightBlue;
+    color: $white;
+  }
+
+  &__docs {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    padding: 10px 0 10px 40px;
+    border-left: 1px solid $white;
+
+    div {
+      width: 45%;
+    }
+  }
+
+  &__info {
+    display: flex;
+
+    li + li {
+      padding-left: 30px;
+    }
+  }
+
+  &__account {
+    background: $blue;
+    color: $white;
+    display: flex;
+    line-height: 1.5;
+
+    &_info {
+      width: 50%;
+      display: flex;
+      align-items: center;
+
+      p {
+        padding-left: 25px;
+      }
+    }
+
+    &_contact {
+      width: 50%;
+      padding-left: 40px;
+      border-left: 1px solid $white;
+    }
+  }
+
+  &__example {
+    height: 345px;
+
+    background-image: url("../img/main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 36%;
   }
 
   &:after {
@@ -259,6 +387,11 @@ span {
       padding-bottom: 40px;
       border-bottom: 1px solid $blue;
       margin-bottom: 30px;
+    }
+
+    &-3 {
+      width: 50%;
+      flex-direction: column;
     }
   }
 
@@ -281,6 +414,10 @@ span {
 
     &_padding {
       padding-bottom: 15px;
+    }
+
+    &-3 {
+      width: auto;
     }
   }
 
@@ -337,6 +474,18 @@ span {
       border: 8px solid $white;
       height: 159px;
       width: 159px;
+    }
+
+    &-3 {
+      position: static;
+      transform: translateX(0);
+      width: 90px;
+
+      img {
+        width: 90px;
+        height: 90px;
+        border-width: 5px;
+      }
     }
   }
 }
@@ -401,9 +550,8 @@ span {
   }
 
   h4 {
-    font-size: 16px;
-    font-weight: 600;
-    font-family: $primaryTitleFont;
+    font-size: 18px;
+    font-weight: 500;
     max-width: 320px;
     padding-bottom: 22px;
   }
@@ -426,6 +574,11 @@ span {
 
   &__order {
     border-bottom: 1px solid $blue;
+
+    &-3 {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__list {
@@ -442,6 +595,14 @@ span {
     &_grey li:nth-of-type(odd) {
       background-color: $lightGrey;
     }
+
+    &-3 {
+      width: 48%;
+
+      li:nth-of-type(even) {
+        background-color: $lightGrey;
+      }
+    }
   }
 
   &__options {
@@ -450,6 +611,10 @@ span {
 
     &-2 {
       padding: 0;
+    }
+
+    &-3 {
+      width: 50%;
     }
   }
 
@@ -476,18 +641,32 @@ span {
   &-2 {
     width: 575px;
   }
-  &__name {
-    font-family: $primaryTitleFont;
-    font-weight: 700;
+  &-3 {
+    width: 100%;
   }
-
-  &__item + &__item {
-    padding-top: 70px;
-  }
-
   p {
     font-size: 13px;
   }
+  &__name {
+    font-family: $primaryTitleFont;
+    font-weight: 700;
+
+    &.terms__name-3 {
+      font-size: 18px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__text {
+    &-3 {
+      width: 90%;
+    }
+  }
+
+  &__item-2 + &__item-2 {
+    padding-top: 70px;
+  }
+ 
 
   h4 {
     font-size: 18px;
@@ -507,7 +686,6 @@ span {
       &:nth-of-type(2) {
         height: 185px;
       }
-
     }
   }
 }
@@ -516,10 +694,18 @@ span {
   display: flex;
   width: 100%;
   margin: 0 -10px;
+  
+  &-3 {
+    margin: 0 -15px;
+  }
 
   &__item {
     width: 50%;
     padding: 0 10px;
+
+    &-3 {
+      padding: 0 15px;
+    }
   }
 
   &__name {
@@ -536,6 +722,17 @@ span {
       outline: transparent;
       padding: 10px;
       width: 90%;
+    }
+
+    &-3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      input {
+        width: 145px;
+        margin: 0;
+      }
     }
   }
 }
